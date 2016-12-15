@@ -1,16 +1,20 @@
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
 
 export class Counter {
-  _count = 0;
+  
+  private _count = 0;
+  private _value = new BehaviorSubject<number>(this._count);
 
   increment() {
-    this._count++;
+    this._value.next(++this._count);
   }
 
   decrement() {
     this._count--;
   }
 
-  get value() {
-    return this._count;
+  get value(): Observable<number> {
+    return this._value.asObservable();
   }
 }

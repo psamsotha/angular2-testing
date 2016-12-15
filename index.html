@@ -3,17 +3,20 @@
   <meta charset="utf-8">
   <title>Angular 2 Testing</title>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
 </head>
 <body>
   <h2>Count: <span id="count">0</span></h2>
 
   <script>
     SystemJS.import('app/counter/counter.js').then(function(module) {
-      var counter = new module.Counter();
       var count = document.getElementById('count');
+      var counter = new module.Counter();
+      counter.value.subscribe(function(value) {
+        count.innerHTML = value;
+      });
       setInterval(function () {
         counter.increment();
-        count.innerHTML = counter.value;
       }, 1000);
     });
   </script>

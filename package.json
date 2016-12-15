@@ -33,6 +33,7 @@
     "typescript": "^2.1.4"
   },
   "dependencies": {
+    "rxjs": "^5.0.1",
     "systemjs": "^0.19.41"
   }
 }
