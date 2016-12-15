@@ -31,5 +31,8 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "lite-server": "^2.2.2",
     "typescript": "^2.1.4"
+  },
+  "dependencies": {
+    "systemjs": "^0.19.41"
   }
 }
