@@ -8,15 +8,19 @@ describe('Counter', () => {
     counter = new Counter();
   });
 
-  it('should increase value of counter when incremented', () => {
-    expect(counter.value).toEqual(0);
+  it('should increase value of counter when incremented', (done) => {
     counter.increment();
-    expect(counter.value).toEqual(1);
+    counter.value.subscribe(value => {
+      expect(value).toEqual(1);
+      done();
+    });
   });
 
-  it('should decrease value of counter when deccremented', () => {
-    expect(counter.value).toEqual(0);
+  it('should decrease value of counter when decremented', (done) => {
     counter.decrement();
-    expect(counter.value).toEqual(-1);
+    counter.value.subscribe(value => {
+      expect(value).toEqual(-1);
+      done();
+    });
   });
 });

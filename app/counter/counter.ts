@@ -11,7 +11,7 @@ export class Counter {
   }
 
   decrement() {
-    this._count--;
+    this._value.next(--this._count);
   }
 
   get value(): Observable<number> {
