@@ -9,16 +9,6 @@
     "test-once": "tsc && karma start karma.conf.js --single-run",
     "tsc": "tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/psamsotha/angular2-testing.git"
-  },
-  "author": "Paul Samsotha <paulsamsotha.dev@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/psamsotha/angular2-testing/issues"
-  },
-  "homepage": "https://github.com/psamsotha/angular2-testing#readme",
   "devDependencies": {
     "@types/jasmine": "^2.5.38",
     "@types/node": "^6.0.52",
@@ -33,7 +23,15 @@
     "typescript": "^2.1.4"
   },
   "dependencies": {
+    "@angular/common": "^2.3.1",
+    "@angular/compiler": "^2.3.1",
+    "@angular/core": "^2.3.1",
+    "@angular/platform-browser": "^2.3.1",
+    "@angular/platform-browser-dynamic": "^2.3.1",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.1",
-    "systemjs": "^0.19.41"
+    "systemjs": "^0.19.41",
+    "zone.js": "^0.7.2"
   }
 }
